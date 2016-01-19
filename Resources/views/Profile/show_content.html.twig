@@ -1,0 +1,16 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="row profile">
+	<div class="tabs col-xs-12 col-md-2 col-lg-3">
+	</div>
+	<div class="_profile col-xs-12 col-md-10 col-lg-9">
+		<div id="profile" class="tab-pane"
+			title="{% trans %}profile.tabs.profile{% endtrans %}"
+			rel="{{ path('fos_user_profile_edit') }}">
+		</div>
+		<div id="password" class="tab-pane"
+			title="{% trans %}profile.tabs.password{% endtrans %}"
+			rel="{{ path('fos_user_change_password') }}">
+		</div>
+	</div>
+</div>

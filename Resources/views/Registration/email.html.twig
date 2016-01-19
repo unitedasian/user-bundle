@@ -1,0 +1,19 @@
+{% extends "FOSUserBundle::email.html.twig" %}
+
+{% block subject_content %}
+{{ 'registration.email.subject'|trans({'%username%': user.username, '%url%': confirmationUrl}, 'FOSUserBundle') }}
+{% endblock %}
+
+{% block body_html_content %}
+{{ 'registration.email.body'|trans({'%username%': user.username, '%url%': confirmationUrl}, 'FOSUserBundle')|raw }}
+{% endblock %}
+
+{% block disclaimer_content %}
+{{ 'registration.email.disclaimer'|trans({'%username%': user.username, '%url%': confirmationUrl}, 'FOSUserBundle')|raw }}
+{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+{{ 'registration.email.message'|trans({'%username%': user.username, '%url%': confirmationUrl}, 'FOSUserBundle') }}
+{% endautoescape %}
+{% endblock %}

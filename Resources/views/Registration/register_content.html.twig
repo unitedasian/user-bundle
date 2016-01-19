@@ -1,0 +1,21 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% form_theme form "bootstrap_3_layout.html.twig" %}
+
+<form action="{{ path('fos_user_registration_register') }}" method="POST" class="form">
+	{% if form.vars.errors|length %}
+		<div class="alert alert-error">
+			{{ form_errors(form) }}
+		</div>
+	{% endif %}
+	{{ form_row(form.username) }}
+	{{ form_row(form.plainPassword) }}
+	{{ form_rest(form) }}
+	<div class="form-group">
+		<input type="submit" class="btn btn-primary btn-block"
+		value="{{ 'registration.submit'|trans }}" />
+	</div>
+	<div class="alt-link">
+		<a href="{{ path('fos_user_security_login') }}">{% trans %}registration.login{% endtrans %}</a>
+	</div>
+</form>

@@ -1,0 +1,14 @@
+{% extends "FOSUserBundle::email.html.twig" %}
+
+{% trans_default_domain "FOSUserBundle" %}
+
+{% block subject_content %}
+	{% trans %}resetting.email.subject{% endtrans %}
+{% endblock %}
+
+{% block body_html_content %}
+	{%- autoescape false %}
+		{% trans with { '%username%': user.username, '%url%': confirmationUrl }%}resetting.email.content{% endtrans %}
+	{%- endautoescape %}
+{% endblock %}
+

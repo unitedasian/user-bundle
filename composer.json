@@ -1,0 +1,26 @@
+{
+    "name": "uam/user-bundle",
+    "description": "User bundle",
+    "keywords": ["symfony2", "symfony", "bundle", "security", "FOSUserBundle"],
+    "homepage": "http://gitlab.united-asian.com/uam-private/UAMUserBundle",
+    "type": "symfony-bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Olivier Pichon",
+            "email": "op@united-asian.com"
+        }
+    ],
+    "require": {
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
+        "unitedasian/propel-session-bundle": "~1.0"
+    },
+    "autoload": {
+        "psr-4": { "UAM\\Bundle\\UserBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.1.x-dev"
+        }
+    }
+}

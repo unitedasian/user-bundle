@@ -1,0 +1,16 @@
+{
+  "name": "uam/user-bundle",
+  "dependencies": {
+    "autotabs": "*",
+    "jquery.cookie": "*",
+    "jquery-form": "*"
+  },
+  "overrides": {
+    "bootstrap": {
+      "ignore": true
+    },
+    "jquery": {
+      "ignore": true
+    }
+  }
+}

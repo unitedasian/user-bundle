@@ -1,0 +1,28 @@
+.profile .tab-pane {
+	border: 1px solid #ddd;
+	border-width: 0 0 0 1px;
+	display: none;
+	padding-left: 1em;
+}
+
+.profile .autotabs {
+	border: none;
+	margin-right: 1em;
+	width: 13em;
+}
+
+.profile .autotabs > li.autotab {
+	line-height: auto;
+	border: none;
+}
+
+.profile .autotabs .autotab a {
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	border: none;
+}
+
+.profile .tab-pane h3 {
+	margin-top: 0;
+}

@@ -1,0 +1,19 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain "FOSUserBundle" %}
+
+{% block uam_user_head_style %}
+{% stylesheets
+	'bundles/uamuser/css/user.css'
+%}
+	<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block uam_user_page_class %}user col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4{% endblock %}
+
+{% block uam_user_page_title %}{% trans %}resetting.page_title{% endtrans %}{% endblock %}
+
+{% block uam_user_content %}
+	{% include "FOSUserBundle:Resetting:reset_content.html.twig" %}
+{% endblock %}

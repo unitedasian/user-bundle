@@ -1,0 +1,6 @@
+services:
+    uam_user.twig.signup_extension:
+        class: UAM\Bundle\UserBundle\Twig\Extension\SignupExtension
+        arguments: [@service_container]
+        tags:
+            - { name: twig.extension }

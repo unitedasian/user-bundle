@@ -1,0 +1,12 @@
+services:
+
+    uam_user.registration.update_email.listener:
+        class: UAM\Bundle\UserBundle\EventListener\UpdateUserEmailListener
+        tags:
+            - { name: kernel.event_subscriber }
+
+    uam_user.registration.form.type:
+        class:  'UAM\Bundle\UserBundle\Form\Type\RegistrationFormType'
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: uam_user_registration }

@@ -1,0 +1,22 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain "FOSUserBundle" %}
+
+{% block uam_user_head_style %}
+{% stylesheets
+    'bundles/uamuser/css/user.css'
+%}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block uam_user_page_class %}user col-xs-12 col-sm-6 col-sm-offset-3{% endblock %}
+
+{% block uam_user_page_title %}{% trans %}registration.confirmed.page_title{% endtrans %}{% endblock %}
+
+{% block uam_user_content %}
+    {{ 'registration.confirmed.content'|trans({'%username%': user.username})|raw }}
+    {% if profile_enabled %}
+	    {{ render(controller('FOSUserBundle:Profile:edit')) }}
+	{% endif %}
+{% endblock %}

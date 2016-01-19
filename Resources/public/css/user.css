@@ -1,0 +1,17 @@
+.user .help-block {
+	font-size: 90%;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+.user .form-control {
+	font-size: 125%;
+	padding: 8px 12px;
+	height: 45px;
+	min-height: 45px;
+}
+
+.alt-link {
+	text-align: center;
+	font-size: 90%;
+}

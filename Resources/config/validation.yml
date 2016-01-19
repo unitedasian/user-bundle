@@ -1,0 +1,21 @@
+FOS\UserBundle\Propel\User:
+    properties:
+        username:
+            - NotBlank:
+                message: fos_user.email.blank
+                groups: [Register, Credentials]
+            - Email:
+                message: fos_user.email.invalid
+        plainPassword:
+            - NotBlank:
+                message: fos_user.password.blank
+                groups: [Register, Credentials]
+            - Length:
+                min: 6
+                minMessage: fos_user.password.short
+                groups: [Register, UserProfile]
+    constraints:
+        - Propel\PropelBundle\Validator\Constraints\UniqueObject:
+            groups: [Register, UserProfile]
+            fields: username_canonical
+            message: fos_user.email.already_used

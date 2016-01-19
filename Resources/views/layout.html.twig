@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>	<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>		<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	{% block uam_user_head_style %}
+	{% endblock %}
+	{% block uam_user_head_script %}
+		<script>
+		var uam_user = {};
+		</script>
+	{% endblock %}
+</head>
+<body>
+	<div class="row">
+		<div class="{% block uam_user_page_class %}{% endblock %}">
+			<h1>{% block uam_user_page_title %}{% endblock %}</h1>
+			{% block uam_user_content %}
+				{% block fos_user_content %}{% endblock %}
+			{% endblock %}
+		</div>
+	</div>
+	{% block uam_user_foot_script %}{% endblock %}
+</body>
+</html>

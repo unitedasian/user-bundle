@@ -1,0 +1,42 @@
+{% extends "UAMUserBundle::layout.html.twig" %}
+
+{% trans_default_domain "FOSUserBundle" %}
+
+{% block uam_user_head_style %}
+{% stylesheets
+	'bundles/uamuser/css/login.css'
+%}
+	<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block uam_user_page_class %}login{% endblock %}
+
+{% block uam_user_page_title %}{% endblock %}
+
+{% block uam_user_content %}
+<form action="{{ path('fos_user_security_check') }}" method="post" class="form form-signin">
+	<h2 class="form-signin-heading">{% block uam_user_page_heading %}{{ 'security.login.page_title'|trans }}{% endblock %}</h2>
+	{% if error %}
+		<div class="alert alert-danger">{% trans %}security.login.error{% endtrans %}</div>
+	{% endif %}
+	<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+	<input type="text" class="form-control" id="username" name="_username" required="required" placeholder="{{ 'security.login.username'|trans }}" value="{{ last_username }}" autofocus />
+	<input type="password" class="form-control" id="password" name="_password" required="required" placeholder="{{ 'security.login.password'|trans }}" />
+	<div class="checkbox">
+		<label for="remember_me" >
+			<input type="checkbox" class="checkbox" id="remember_me" name="_remember_me" value="on" />{{ 'security.login.remember_me'|trans }}
+		</label>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit">{{ 'security.login.submit'|trans }}</button>
+	</div>
+	<div class="help-block text-center">
+		<a href="{{ path('fos_user_resetting_request') }}">{% trans %}security.login.reset_password{% endtrans %}</a>
+		{% if signup_enabled() or app.environment == 'dev' %}
+			&nbsp;&bull;&nbsp;
+			<a href="{{ path('fos_user_registration_register') }}" tabindex="5">{% trans %}security.login.signup{% endtrans %}</a>
+		{% endif %}
+	</div>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% block subject %}
+	{% autoescape false %}
+		{% spaceless %}
+			{% block subject_content %}{% endblock %}
+		{% endspaceless %}
+	{% endautoescape %}
+{% endblock %}
+
+
+{% block body_html %}
+{% autoescape true %}
+<div{% block style %}{% endblock %}>
+	{% block header %}{% endblock %}
+	{% block body %}
+	<div{% block body_style %}{% endblock %}>
+		<div{% block content_style %}{% endblock %}>
+			{% block body_html_content %}{% endblock %}
+		</div>
+		{% block disclaimer %}
+		<div{% block disclaimer_style %}{% endblock %}>
+			{% block disclaimer_content %}{% endblock %}
+		</div>
+		{% endblock %}
+	</div>
+	{% endblock %}
+	{% block footer %}{% endblock %}
+</div>
+{% endautoescape %}
+{% endblock %}
+
+{% block body_text %}{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "UAMUserBundle::layout.html.twig" %}
+
+{% trans_default_domain "FOSUserBundle" %}
+
+{% block uam_user_head_style %}
+{% include "UAMUserBundle:Profile:head_style.html.twig" %}
+{% endblock %}
+
+{% block uam_user_head_script %}
+	<script>
+	var uam_user = {};
+	</script>
+{% endblock %}
+
+{% block uam_user_page_class %}login{% endblock %}
+
+{% block uam_user_page_title %}{% endblock %}
+
+{%- block uam_user_content -%}
+	{%- include "UAMUserBundle:Profile:show_content.html.twig" -%}
+{%- endblock -%}
+
+{% block uam_user_foot_script %}
+{% include "UAMUserBundle:Profile:foot_script.html.twig" %}
+{% endblock %}

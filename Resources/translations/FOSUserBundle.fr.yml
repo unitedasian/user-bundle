@@ -1,0 +1,149 @@
+change_password:
+    flash:
+        success:        Votre mot de passe a été mis à jour.
+    page_title:         Modifier votre mot de passe
+    submit:             Modifier mon mot de passe
+
+form:
+    current_password:           Votre mot de passe actuel
+    gender:                     Sexe
+    given_names:                Prénom(s)
+    new_password:               Nouveau mot de passe
+    new_password_confirmation:  Confirmer le mot de passe
+    password:                   Mot de passe
+    password_confirmation:      Confirmer le mot de passe
+    surname:                    Nom
+    username:                   Votre adresse courriel
+
+menu:
+    login:              Connexion
+    logout:             Déconnexion
+    profile:            Profil
+    signup:             Inscription
+    welcome:            Bienvenue %user% !
+
+profile:
+    edit:
+        gender:
+            female:     Mme
+            label:      Sexe
+            male:       M.
+        given_names:
+            label:      Prénoms
+        submit:         Sauvegarder
+        surname:
+            label:      Nom
+    flash:
+        updated:        Votre profil a été mis à jour.
+    page_title:         Votre compte
+    profile:
+        page_title:     Informations concernant votre personne
+    tabs:
+        password:       Mot de passe
+        profile:        Profil
+
+registration:
+    check_email: >
+        <h2>Bienvenue !</h2>
+        <p>Merci de nous avoir rejoint.</p>
+        <p>Votre compte est ouvert mais a besoin d'être activé.</p>
+        <p>Nous vous avons envoyé un courriel. Veuillez cliquer sur le lien qu'il
+        contient. Ceci confirmera votre inscription et activera votre compte.</p>
+    confirmed:
+        title:          Votre inscription est confirmée
+        content: >
+            <p>La dernière étape avant de pouvoir librement utiliser notre application
+            est de nous en dire un peu plus sur vous-même en remplissant le formulaire ci-dessous.</p>
+            <p>Vos informations personnelles ne seront jamais communiquées à des tiers,
+            et ne seront pas utilisées pour vous envoyer des courriels indésirables.</p>
+    email:
+        subject: Bienvenue %username% !
+        body: >
+            <p style="margin-bottom: 5px">Bienvenue et merci de nous avoir rejoint !</p>
+            <p style="margin-bottom: 5px">Votre compte a été ouvert.</p>
+            <p style="margin-bottom: 5px">Votre identifiant est votre adresse courriel : %username%.</p>
+            <p style="margin-bottom: 5px">Afin de confirmer votre inscription et
+            d'activer votre compte, veuillez cliquer sur le lien ci-dsssous. Vous
+            pouvez également le copier et le coller dans la barre d'adresse de
+            votre navigateur favori.</p>
+            <div style="text-align:center; padding: 1em 0"><a href="%url%">%url%</a></div>
+        message: |
+            Hello %username%!
+
+            To finish activating your account - please visit %confirmationUrl%
+
+            Regards,
+            the Team.
+    flash:
+        user_created:   Votre compte a été créé.
+    login:              Aller à l'écran de connexion
+    profile_title:      Votre profil
+    page_title:         Inscription
+    submit:             Inscrivez-moi!
+    success:            Bienvenue
+
+resetting:
+    check_email: |
+        <p>Un courriel vient d'être envoyé à %email%. Il contient les instructions pour ré-initialiser votre mot de passe.</p>
+        <p>Notez que pour des raisons de sécurité le lien indiqué dans ce courriel ne peut être utilisé qu'une seule fois.</p>
+    email:
+        subject: Réinitialisation de votre mot de passe
+        content: >
+            <p>Pour réinitialiser votre mot de passe, cliquez sur le lien ci-dessous.</p>
+            <p><a href="%url%">%url%</a></p>
+            <p>Si vous n'avez pas demandé la réinitialisation de votre mot de passe,
+            vous pouvez ignorer ce message sans inquiétude. Votre mot de passe actuel
+            n'est pas compromis et ne sera pas modifié.</p>
+    flash:
+        success: Votre mot de passe a été mis à jour.
+    page_title: Réinitialisation de votre mot de passe
+    password_already_requested: >
+        <p>Une demande de ré-initialisation du mot de passe pour cette adresse courriel
+        a déjà été enregistrée il y a quelques instants.</p>
+        <p>Merci de vérifier votre boîte aux lettres pour y consulter notre courriel
+        précédent. Si vous ne le trouvez pas, pensez à vérifier votre dossier spam,
+        au cas où notre message aurait été filtré.</p>
+        <p>Veuillez attendre quelques minutes avant de refaire votre demande.</p>
+    password_already_requested_back:    Mot de passe oublié
+    request:
+        cancel:  Retourner à l'écran de connexion
+        instructions: >
+            <p>Si vous avez oublié votre mot de passe, saisissez
+            simplement dans le formulaire ci-dessous l'adresse courriel
+            avec laquelle vous vous êtes enregistré(e), puis validez.</p>
+            <p>Nous vous enverrons un mesage courriel contenant les instructions
+            pour ré-initialiser votre mot de passe.</p>
+        invalid_username:   Nous n'avons pas trouvé de compte pour cette adresse courriel.
+        username: Votre adresse courriel
+        submit: Ré-initialiser mon mot de passe
+    reset:
+        cancel: Annuler
+        instructions: >
+            <p>Utilisez le formulaire ci-dessous pour modifier votremot de passe.</p>
+        submit: Modifier mon mot de passe
+    cancel: Annuler
+    login: Retourner à la page de connexion
+
+security:
+    login:
+        error:          Le mot de passe ou l'identifiant est erroné. Veuillez corriger et vous connecter à nouveau.
+        page_title:     Connexion
+        password:       Mot de passe
+        remember_me:    Garder ma connexion ouverte
+        reset_password: Mot de passe oublié ?
+        submit:         Connexion
+        signup:         Inscription
+        username:       Courriel
+
+user:
+    users:
+        actions:
+            title:      Actions
+        created_at:     Enregistré le
+        dob:            Date de naissance
+        gender:         Sexe
+        given_names:    Prénom
+        last_login:     Dernière connexion
+        surname:        Nom
+        title:          Utilisateurs
+        username:       Identifiant

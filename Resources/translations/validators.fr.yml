@@ -1,0 +1,18 @@
+fos_user:
+    email:
+        already_used: Cette adresse courriel est déjà utilisée.
+        blank: Veuillez saisir votre adresse courriel.
+        invalid: Cette adresse courriel est invalide.
+    password:
+        blank: Veuillez saisir un mot de passe (min 6 caractères)
+        short: "[-Inf,Inf]Le mot de passe est trop court."
+        mismatch: Les deux mots de passe ne sont pas identiques.
+    new_password:
+        blank: Entrez un nouveau mot de passe s'il vous plait
+        short: "[-Inf,Inf]Le nouveau mot de passe est trop court"
+    current_password:
+        invalid: Le mot de passe est invalide
+    group:
+        blank: Entrez un nom s'il vous plait
+        short: "[-Inf,Inf]Le nom est trop court"
+        long: "[-Inf,Inf]Le nom est trop long"

@@ -1,0 +1,42 @@
+services:
+    uam_user.profile.registration_success.listener:
+        class: UAM\Bundle\UserBundle\EventListener\CreateUserProfileListener
+        arguments: [%uam_user.profile.class%]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    uam_user.profile.edit_success.listener:
+        class: 'UAM\Bundle\UserBundle\EventListener\ProfileEditSuccessListener'
+        arguments: [@router, @session]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    uam_user.profile.listener:
+        class: 'UAM\Bundle\UserBundle\EventListener\CheckProfileListener'
+        arguments: [@validator, @security.http_utils, @security.context]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onFilterController }
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    # Define "uam_user_profile" as a form type service for the Profile class
+    uam_user.profile.form.type:
+        class: 'UAM\Bundle\UserBundle\Form\Type\ProfileType'
+        arguments: [%uam_user.profile.class%]
+        tags:
+            - { name: form.type, alias: uam_user_profile }
+
+    # Override the fos_user.profile.form.factory service
+    fos_user.profile.form.factory:
+        class: 'FOS\UserBundle\Form\Factory\FormFactory'
+        arguments:
+            - @form.factory
+            - %fos_user.profile.form.name%
+            - %fos_user.profile.form.type%
+            - %uam_user.profile.form.validation_groups%
+
+    # Override the fos_user.profile.form.type service
+    fos_user.profile.form.type:
+        class:  'UAM\Bundle\UserBundle\Form\Type\UserProfileType'
+        arguments: [%fos_user.model.user.class%, %uam_user.profile.form.type%]
+        tags:
+            - { name: form.type, alias: fos_user_profile }

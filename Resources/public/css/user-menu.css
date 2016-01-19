@@ -1,0 +1,20 @@
+.user-menu > li {
+	color: #fff;
+}
+
+@media (min-width: 1200px) {
+	.nav.user-menu > li:not(:last-child)::before {
+		content: "\2022";
+		float: right;
+		padding: 15px 0 15px 5px;
+	}
+
+	.navbar .nav.user-menu > li > a {
+		padding-left: 5px;
+	} 
+}
+
+.nav.user-menu > li > span {
+	padding: 15px;
+	display: block;
+}
