@@ -1,5 +1,5 @@
 {
-    "name": "uam/user-bundle",
+    "name": "unitedasian/user-bundle",
     "description": "User bundle",
     "keywords": ["symfony2", "symfony", "bundle", "security", "FOSUserBundle"],
     "homepage": "http://gitlab.united-asian.com/uam-private/UAMUserBundle",
@@ -20,7 +20,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "4.1.x-dev"
+            "dev-master": "1.0.x-dev"
         }
     }
 }
